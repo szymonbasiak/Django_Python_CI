@@ -1,0 +1,68 @@
+prompt $g
+
+cd .\ci_project
+
+.\venv\Scripts\activate.bat
+
+pip install -r requirements.txt
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+# see "admin" section below
+
+python manage.py runserver
+
+
+________________________________________
+
+http://127.0.0.1:8000/
+
+http://127.0.0.1:8000/admin
+
+# Django Admin. By default it's:
+L: szymonbasiak90
+P: szymonbasiak90
+
+________________________________________
+
+Create 1 job:
+
+import time
+import os
+
+print("# [DEBUG]: cwd =", os.getcwd())
+
+file1 = "coordinates1.txt"
+for x in range(0,10):
+    with open(file1, "w") as fil:
+        fil.write(f"1 {x}")
+        print(f"1 {x}")
+        fil.close()
+        time.sleep(1)
+
+with open(file1, "w") as fil:
+    fil.write("0 0")
+    fil.close()
+
+________________________________________
+
+Create 2 job:
+import time
+import os
+
+print("# [DEBUG]: cwd =", os.getcwd())
+
+file2 = "coordinates2.txt"
+for x in range(0,10):
+    with open(file2, "w") as fil:
+        fil.write(f"2 {x}")
+        print(f"2 {x}")
+        fil.close()
+        time.sleep(1)
+
+with open(file2, "w") as fil:
+    fil.write("0 0")
+    fil.close()
