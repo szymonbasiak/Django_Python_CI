@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs for {{ job.name }}</title>
+</head>
+<body>
+    <h1>Logs for Job: {{ job.name }}</h1>
+    <pre>{{ logs }}</pre>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

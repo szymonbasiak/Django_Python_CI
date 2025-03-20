@@ -1,0 +1,16 @@
+import time
+import os
+
+print("# [DEBUG]: cwd =", os.getcwd())
+
+file1 = "coordinates1.txt"
+for x in range(0,10):
+    with open(file1, "w") as fil:
+        fil.write(f"1 {x}")
+        print(f"1 {x}")
+        fil.close()
+        time.sleep(1)
+
+with open(file1, "w") as fil:
+    fil.write("0 0")
+    fil.close()

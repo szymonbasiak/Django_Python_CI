@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Job</title>
+</head>
+<body>
+    <h1>Run Job: {{ job.name }}</h1>
+    <h2>Output:</h2>
+    <pre>{{ output }}</pre>
+    <h2>Error:</h2>
+    <pre>{{ error }}</pre>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

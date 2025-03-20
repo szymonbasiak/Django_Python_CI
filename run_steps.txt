@@ -2,6 +2,8 @@ prompt $g
 
 cd .\ci_project
 
+python -m venv venv
+
 .\venv\Scripts\activate.bat
 
 pip install -r requirements.txt

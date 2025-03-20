@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CI Jobs</title>
+</head>
+<body>
+    <h1>CI Jobs</h1>
+    <a href="{% url 'create_job' %}">Create Job</a>
+    <ul>
+        {% for job in jobs %}
+            <li>
+                {{ job.name }} - 
+                <a href="{% url 'edit_job' job.id %}">Edit</a> |
+                <a href="{% url 'delete_job' job.id %}">Delete</a> |
+                <a href="{% url 'run_job' job.id %}">Run</a> |
+                <a href="{% url 'view_logs' job.id %}">Logs</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

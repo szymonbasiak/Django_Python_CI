@@ -1,0 +1,40 @@
+=== Job: test1 ===
+Output:
+
+Error:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'a' is not defined
+
+====================
+=== Job: test1 ===
+Output:
+a
+
+Error:
+
+====================
+=== Job: test1 ===
+Output:
+a
+
+Error:
+
+====================
+=== Job: test1 ===
+Output:
+# [DEBUG]: cwd = C:\Users\basiaszy\OneDrive - Tietoevry\TIETO\KURSY-SZKOLENIA\PYTHON3\CompetenceX\django-CI\NEW\ci_project
+1 0
+1 1
+1 2
+1 3
+1 4
+1 5
+1 6
+1 7
+1 8
+1 9
+
+Error:
+
+====================
